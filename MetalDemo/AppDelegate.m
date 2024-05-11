@@ -2,8 +2,6 @@
 //  AppDelegate.m
 //  MetalDemo
 //
-//  Created by Oscar on 11/5/2024.
-//
 
 #import "AppDelegate.h"
 

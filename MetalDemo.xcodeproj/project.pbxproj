@@ -14,6 +14,7 @@
 		55DFF8E22BEF536200FEB619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DFF8E12BEF536200FEB619 /* Assets.xcassets */; };
 		55DFF8E52BEF536200FEB619 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 55DFF8E42BEF536200FEB619 /* Base */; };
 		55DFF8E82BEF536200FEB619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DFF8E72BEF536200FEB619 /* main.m */; };
+		55DFF8F02BEF544800FEB619 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DFF8EF2BEF544800FEB619 /* MetalKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		55DFF8E42BEF536200FEB619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55DFF8E62BEF536200FEB619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55DFF8E72BEF536200FEB619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55DFF8EF2BEF544800FEB619 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DFF8F02BEF544800FEB619 /* MetalKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +50,7 @@
 			children = (
 				55DFF8D42BEF536100FEB619 /* MetalDemo */,
 				55DFF8D32BEF536100FEB619 /* Products */,
+				55DFF8EE2BEF544700FEB619 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +78,14 @@
 				55DFF8E72BEF536200FEB619 /* main.m */,
 			);
 			path = MetalDemo;
+			sourceTree = "<group>";
+		};
+		55DFF8EE2BEF544700FEB619 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55DFF8EF2BEF544800FEB619 /* MetalKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
