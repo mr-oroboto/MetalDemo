@@ -5,6 +5,8 @@
 
 #import <UIKit/UIKit.h>
 
+@import MetalKit;
+
 @interface ViewController : UIViewController
 
 

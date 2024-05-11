@@ -15,6 +15,7 @@
 		55DFF8E52BEF536200FEB619 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 55DFF8E42BEF536200FEB619 /* Base */; };
 		55DFF8E82BEF536200FEB619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DFF8E72BEF536200FEB619 /* main.m */; };
 		55DFF8F02BEF544800FEB619 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DFF8EF2BEF544800FEB619 /* MetalKit.framework */; };
+		55DFF8F32BEF5CD900FEB619 /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DFF8F22BEF5CD900FEB619 /* Renderer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		55DFF8E62BEF536200FEB619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55DFF8E72BEF536200FEB619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55DFF8EF2BEF544800FEB619 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		55DFF8F22BEF5CD900FEB619 /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+		55DFF8F42BEF5CEF00FEB619 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 				55DFF8E32BEF536200FEB619 /* LaunchScreen.storyboard */,
 				55DFF8E62BEF536200FEB619 /* Info.plist */,
 				55DFF8E72BEF536200FEB619 /* main.m */,
+				55DFF8F22BEF5CD900FEB619 /* Renderer.m */,
+				55DFF8F42BEF5CEF00FEB619 /* Renderer.h */,
 			);
 			path = MetalDemo;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				55DFF8DD2BEF536100FEB619 /* ViewController.m in Sources */,
 				55DFF8D72BEF536100FEB619 /* AppDelegate.m in Sources */,
 				55DFF8E82BEF536200FEB619 /* main.m in Sources */,
+				55DFF8F32BEF5CD900FEB619 /* Renderer.m in Sources */,
 				55DFF8DA2BEF536100FEB619 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
