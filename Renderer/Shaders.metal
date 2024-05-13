@@ -25,7 +25,7 @@ vertex RasterizerOutput vertexShader(uint vertexId [[vertex_id]],
     RasterizerOutput out;
     
     out.position = projectionMatrix[0] * viewMatrix[0] * modelMatrix[0] * vertices[vertexId].position;
-    out.colour = 0;
+    out.colour = vertices[vertexId].colour;
     
     return out;
 }

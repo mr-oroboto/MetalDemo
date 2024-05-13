@@ -39,6 +39,7 @@
         id<MTLFunction> fragmentShader = [defaultLibrary newFunctionWithName:@"fragmentShader"];
         
         MTLRenderPipelineDescriptor* pipelineDescriptor = [[MTLRenderPipelineDescriptor alloc] init];
+        pipelineDescriptor.label = @"Demo pipeline";
         pipelineDescriptor.vertexFunction = vertexShader;
         pipelineDescriptor.fragmentFunction = fragmentShader;
         pipelineDescriptor.colorAttachments[0].pixelFormat = mtkView.colorPixelFormat;
@@ -82,6 +83,7 @@
 {
     // Create a new command buffer for the current render pass.
     id<MTLCommandBuffer> cmdBuffer = [_cmdQueue commandBuffer];
+    cmdBuffer.label = @"Render";
     
     // Get a render pass descriptor from the view.
     MTLRenderPassDescriptor* renderPassDescriptor = view.currentRenderPassDescriptor;
