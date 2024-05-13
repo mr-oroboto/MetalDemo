@@ -22,8 +22,6 @@
     simd_float4x4               _viewMatrix;
     simd_float4x4               _projectionMatrix;
     vector_uint2                _viewSize;      // x,y size of current viewport
-    
-//    float                       _cameraZ;       // initial z position of camera
 }
 
 @synthesize cameraZ = _cameraZ;
@@ -31,8 +29,6 @@
 - (void)setCameraZ:(float)cameraZ
 {
     _cameraZ = cameraZ;
-    NSLog(@"cameraz: %f", _cameraZ);
-    
     _viewMatrix = [MetalMatrix mm_lookAtWithEyeX:0
                                         withEyeY:0
                                         withEyeZ:_cameraZ

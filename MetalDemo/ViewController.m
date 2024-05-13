@@ -64,11 +64,11 @@
     float cameraZ = [_renderer cameraZ];
     if (currentScale < _startingPinchScale)
     {
-        [_renderer setCameraZ:cameraZ - 0.1];
+        [_renderer setCameraZ:cameraZ - 0.5];
     }
     else
     {
-        [_renderer setCameraZ:cameraZ + 0.1];
+        [_renderer setCameraZ:cameraZ + 0.5];
     }
 }
 
