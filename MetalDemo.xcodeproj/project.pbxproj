@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		55BABB412BF1B2EE00B1EBDD /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 55BABB402BF1B2EE00B1EBDD /* Shaders.metal */; };
 		55BABB432BF1B6CD00B1EBDD /* SceneData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BABB422BF1B6CD00B1EBDD /* SceneData.m */; };
+		55BABB4B2BF1BA3300B1EBDD /* MetalMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BABB4A2BF1BA3300B1EBDD /* MetalMatrix.m */; };
 		55DFF8D72BEF536100FEB619 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DFF8D62BEF536100FEB619 /* AppDelegate.m */; };
 		55DFF8DA2BEF536100FEB619 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DFF8D92BEF536100FEB619 /* SceneDelegate.m */; };
 		55DFF8DD2BEF536100FEB619 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DFF8DC2BEF536100FEB619 /* ViewController.m */; };
@@ -24,6 +25,8 @@
 		55BABB402BF1B2EE00B1EBDD /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		55BABB422BF1B6CD00B1EBDD /* SceneData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneData.m; sourceTree = "<group>"; };
 		55BABB442BF1B6D700B1EBDD /* SceneData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneData.h; sourceTree = "<group>"; };
+		55BABB492BF1BA3300B1EBDD /* MetalMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalMatrix.h; sourceTree = "<group>"; };
+		55BABB4A2BF1BA3300B1EBDD /* MetalMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalMatrix.m; sourceTree = "<group>"; };
 		55DFF8D22BEF536100FEB619 /* MetalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DFF8D52BEF536100FEB619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55DFF8D62BEF536100FEB619 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		55BABB392BF1B1B400B1EBDD /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
+				55BABB452BF1B9F500B1EBDD /* MetalMatrix */,
 				55DFF8F22BEF5CD900FEB619 /* Renderer.m */,
 				55DFF8F42BEF5CEF00FEB619 /* Renderer.h */,
 				55DFF8F52BEF600800FEB619 /* ShaderSharedTypes.h */,
@@ -65,6 +69,15 @@
 				55BABB442BF1B6D700B1EBDD /* SceneData.h */,
 			);
 			path = Renderer;
+			sourceTree = "<group>";
+		};
+		55BABB452BF1B9F500B1EBDD /* MetalMatrix */ = {
+			isa = PBXGroup;
+			children = (
+				55BABB492BF1BA3300B1EBDD /* MetalMatrix.h */,
+				55BABB4A2BF1BA3300B1EBDD /* MetalMatrix.m */,
+			);
+			path = MetalMatrix;
 			sourceTree = "<group>";
 		};
 		55DFF8C92BEF536100FEB619 = {
@@ -181,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BABB4B2BF1BA3300B1EBDD /* MetalMatrix.m in Sources */,
 				55DFF8DD2BEF536100FEB619 /* ViewController.m in Sources */,
 				55BABB412BF1B2EE00B1EBDD /* Shaders.metal in Sources */,
 				55BABB432BF1B6CD00B1EBDD /* SceneData.m in Sources */,

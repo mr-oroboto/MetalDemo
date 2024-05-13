@@ -10,6 +10,7 @@
 
 @interface SceneData : NSObject
 
+- (instancetype)initWithDevice:(id<MTLDevice>)device;
 - (void)renderIntoEncoder:(id<MTLRenderCommandEncoder>)encoder;
 
 @end

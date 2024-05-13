@@ -19,7 +19,10 @@ typedef struct
 // Allows for easy (named) referencing of vertex shader inputs.
 typedef enum VertexDataInputIndex
 {
-    VertexDataInputIndexVertices = 0
+    VertexDataInputIndexVertices = 0,
+    VertexDataInputIndexModelMatrix = 1,
+    VertexDataInputIndexViewMatrix = 2,
+    VertexDataInputIndexProjectionMatrix = 3
 } VertexDataInputIndex;
 
 #endif /* ShaderSharedTypes_h */

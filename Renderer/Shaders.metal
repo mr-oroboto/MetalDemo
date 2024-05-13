@@ -17,15 +17,14 @@ struct RasterizerOutput
 };
 
 vertex RasterizerOutput vertexShader(uint vertexId [[vertex_id]],
-                                     constant VertexData* vertices [[buffer(VertexDataInputIndexVertices)]])
+                                     constant VertexData* vertices [[buffer(VertexDataInputIndexVertices)]],
+                                     constant float4x4* modelMatrix [[buffer(VertexDataInputIndexModelMatrix)]],
+                                     constant float4x4* viewMatrix [[buffer(VertexDataInputIndexViewMatrix)]],
+                                     constant float4x4* projectionMatrix [[buffer(VertexDataInputIndexProjectionMatrix)]])
 {
     RasterizerOutput out;
     
-    // TODO: implement shader
-    out.position.x = 0;
-    out.position.y = 0;
-    out.position.z = 0;
-    
+    out.position = projectionMatrix[0] * viewMatrix[0] * modelMatrix[0] * vertices[vertexId].position;
     out.colour = 0;
     
     return out;
