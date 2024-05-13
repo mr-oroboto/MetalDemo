@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55BABB412BF1B2EE00B1EBDD /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 55BABB402BF1B2EE00B1EBDD /* Shaders.metal */; };
+		55BABB432BF1B6CD00B1EBDD /* SceneData.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BABB422BF1B6CD00B1EBDD /* SceneData.m */; };
 		55DFF8D72BEF536100FEB619 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DFF8D62BEF536100FEB619 /* AppDelegate.m */; };
 		55DFF8DA2BEF536100FEB619 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DFF8D92BEF536100FEB619 /* SceneDelegate.m */; };
 		55DFF8DD2BEF536100FEB619 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DFF8DC2BEF536100FEB619 /* ViewController.m */; };
@@ -19,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55BABB402BF1B2EE00B1EBDD /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		55BABB422BF1B6CD00B1EBDD /* SceneData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneData.m; sourceTree = "<group>"; };
+		55BABB442BF1B6D700B1EBDD /* SceneData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneData.h; sourceTree = "<group>"; };
 		55DFF8D22BEF536100FEB619 /* MetalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DFF8D52BEF536100FEB619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55DFF8D62BEF536100FEB619 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,6 +39,7 @@
 		55DFF8EF2BEF544800FEB619 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		55DFF8F22BEF5CD900FEB619 /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
 		55DFF8F42BEF5CEF00FEB619 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		55DFF8F52BEF600800FEB619 /* ShaderSharedTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderSharedTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,9 +54,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55BABB392BF1B1B400B1EBDD /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				55DFF8F22BEF5CD900FEB619 /* Renderer.m */,
+				55DFF8F42BEF5CEF00FEB619 /* Renderer.h */,
+				55DFF8F52BEF600800FEB619 /* ShaderSharedTypes.h */,
+				55BABB402BF1B2EE00B1EBDD /* Shaders.metal */,
+				55BABB422BF1B6CD00B1EBDD /* SceneData.m */,
+				55BABB442BF1B6D700B1EBDD /* SceneData.h */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
 		55DFF8C92BEF536100FEB619 = {
 			isa = PBXGroup;
 			children = (
+				55BABB392BF1B1B400B1EBDD /* Renderer */,
 				55DFF8D42BEF536100FEB619 /* MetalDemo */,
 				55DFF8D32BEF536100FEB619 /* Products */,
 				55DFF8EE2BEF544700FEB619 /* Frameworks */,
@@ -79,8 +99,6 @@
 				55DFF8E32BEF536200FEB619 /* LaunchScreen.storyboard */,
 				55DFF8E62BEF536200FEB619 /* Info.plist */,
 				55DFF8E72BEF536200FEB619 /* main.m */,
-				55DFF8F22BEF5CD900FEB619 /* Renderer.m */,
-				55DFF8F42BEF5CEF00FEB619 /* Renderer.h */,
 			);
 			path = MetalDemo;
 			sourceTree = "<group>";
@@ -164,6 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				55DFF8DD2BEF536100FEB619 /* ViewController.m in Sources */,
+				55BABB412BF1B2EE00B1EBDD /* Shaders.metal in Sources */,
+				55BABB432BF1B6CD00B1EBDD /* SceneData.m in Sources */,
 				55DFF8D72BEF536100FEB619 /* AppDelegate.m in Sources */,
 				55DFF8E82BEF536200FEB619 /* main.m in Sources */,
 				55DFF8F32BEF5CD900FEB619 /* Renderer.m in Sources */,

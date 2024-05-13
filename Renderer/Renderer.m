@@ -7,12 +7,18 @@
 @import MetalKit;
 
 #import "Renderer.h"
+#import "ShaderSharedTypes.h"
+#import "SceneData.h"
 
 @implementation Renderer
 {
-    id<MTLDevice>       _device;        // Metal's abstraction for the GPU
-    id<MTLCommandQueue> _cmdQueue;      // Queue of encoded commands to send to GPU
-    vector_uint2        _viewSize;      // x,y size of current viewport
+    id<MTLDevice>               _device;        // Metal's abstraction for the GPU
+    id<MTLCommandQueue>         _cmdQueue;      // Queue of encoded commands to send to GPU
+    id<MTLRenderPipelineState>  _pipelineState; // the render pipeline (with configured shaders etc)
+
+    SceneData*                  _sceneData;     // draws whatever it contains
+    
+    vector_uint2                _viewSize;      // x,y size of current viewport
 }
 
 - (nonnull instancetype)initWithMetalKitView:(MTKView *)mtkView
@@ -20,8 +26,24 @@
     self = [super init];
     if (self)
     {
+        _sceneData = [[SceneData alloc] init];
+        
         _device = mtkView.device;
         _cmdQueue = [_device newCommandQueue];
+
+        // Describe the render pipeline (eg. which shaders to use, format of texture etc).
+        id<MTLLibrary> defaultLibrary = [_device newDefaultLibrary];
+        id<MTLFunction> vertexShader = [defaultLibrary newFunctionWithName:@"vertexShader"];
+        id<MTLFunction> fragmentShader = [defaultLibrary newFunctionWithName:@"fragmentShader"];
+        
+        MTLRenderPipelineDescriptor* pipelineDescriptor = [[MTLRenderPipelineDescriptor alloc] init];
+        pipelineDescriptor.vertexFunction = vertexShader;
+        pipelineDescriptor.fragmentFunction = fragmentShader;
+        pipelineDescriptor.colorAttachments[0].pixelFormat = mtkView.colorPixelFormat;
+
+        NSError* error;
+        _pipelineState = [_device newRenderPipelineStateWithDescriptor:pipelineDescriptor error:&error];
+        NSAssert(_pipelineState, @"Failed to create pipeline: %@", error);
     }
     
     return self;
@@ -57,7 +79,9 @@
             .znear = 0.0,
             .zfar = 1.0}];
     
-    // TODO: rendering commands
+    [encoder setRenderPipelineState:_pipelineState];
+    
+    [_sceneData renderIntoEncoder:encoder];
     
     [encoder endEncoding];
     
