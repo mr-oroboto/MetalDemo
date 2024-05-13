@@ -21,6 +21,7 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="rKf-B7-4Cf" appends="YES" id="KTF-hz-zVT"/>
                             <outletCollection property="gestureRecognizers" destination="kMl-Xk-oJR" appends="YES" id="IEK-pN-7TG"/>
+                            <outletCollection property="gestureRecognizers" destination="sQc-Ri-bOg" appends="YES" id="Whz-je-Od4"/>
                         </connections>
                     </view>
                 </viewController>
@@ -35,6 +36,11 @@
                         <action selector="handlePinchGesture:" destination="BYZ-38-t0r" id="Wus-5S-PWw"/>
                     </connections>
                 </pinchGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="sQc-Ri-bOg">
+                    <connections>
+                        <action selector="handleDoubleTapGesture:" destination="BYZ-38-t0r" id="1qU-L0-wvg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="125" y="-34"/>
         </scene>
