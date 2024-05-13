@@ -16,7 +16,7 @@
     Renderer*   _renderer;
     
     float       _cameraAngle;
-    CGPoint     _startingTouchPos;
+    CGPoint     _previousTouchPos;
     float       _startingPinchScale;
 }
 
@@ -41,13 +41,16 @@
 
     if ([gestureRecoginser state] == UIGestureRecognizerStateBegan)
     {
-        _startingTouchPos = currentTouchPos;
+        _previousTouchPos = currentTouchPos;
         return;
     }
-    
-    _cameraAngle += (currentTouchPos.x < _startingTouchPos.x) ? -0.1 : 0.1;
-    
-    [_renderer rotateViewToAngle:_cameraAngle];
+
+    if ([gestureRecoginser state] == UIGestureRecognizerStateChanged)
+    {
+        _cameraAngle += (currentTouchPos.x < _previousTouchPos.x) ? -0.1 : 0.1;
+        _previousTouchPos = currentTouchPos;
+        [_renderer rotateViewToAngle:_cameraAngle];
+    }
 }
 
 - (IBAction)handlePinchGesture:(UIGestureRecognizer*)sender
