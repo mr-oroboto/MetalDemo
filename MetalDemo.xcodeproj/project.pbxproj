@@ -27,7 +27,7 @@
 		55BABB442BF1B6D700B1EBDD /* SceneData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneData.h; sourceTree = "<group>"; };
 		55BABB492BF1BA3300B1EBDD /* MetalMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalMatrix.h; sourceTree = "<group>"; };
 		55BABB4A2BF1BA3300B1EBDD /* MetalMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalMatrix.m; sourceTree = "<group>"; };
-		55DFF8D22BEF536100FEB619 /* MetalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55DFF8D22BEF536100FEB619 /* orobotoMetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orobotoMetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DFF8D52BEF536100FEB619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55DFF8D62BEF536100FEB619 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		55DFF8D82BEF536100FEB619 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		55DFF8D32BEF536100FEB619 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55DFF8D22BEF536100FEB619 /* MetalDemo.app */,
+				55DFF8D22BEF536100FEB619 /* orobotoMetal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 			);
 			name = MetalDemo;
 			productName = MetalDemo;
-			productReference = 55DFF8D22BEF536100FEB619 /* MetalDemo.app */;
+			productReference = 55DFF8D22BEF536100FEB619 /* orobotoMetal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -363,7 +363,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oroboto.MetalDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = orobotoMetal;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -389,7 +389,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oroboto.MetalDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = orobotoMetal;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
