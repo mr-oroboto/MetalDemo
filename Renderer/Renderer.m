@@ -22,6 +22,26 @@
     simd_float4x4               _viewMatrix;
     simd_float4x4               _projectionMatrix;
     vector_uint2                _viewSize;      // x,y size of current viewport
+    
+//    float                       _cameraZ;       // initial z position of camera
+}
+
+@synthesize cameraZ = _cameraZ;
+
+- (void)setCameraZ:(float)cameraZ
+{
+    _cameraZ = cameraZ;
+    NSLog(@"cameraz: %f", _cameraZ);
+    
+    _viewMatrix = [MetalMatrix mm_lookAtWithEyeX:0
+                                        withEyeY:0
+                                        withEyeZ:_cameraZ
+                                     withCenterX:0
+                                     withCenterY:0
+                                     withCenterZ:0
+                                         withUpX:0
+                                         withUpY:1.0
+                                         withUpZ:0];
 }
 
 - (nonnull instancetype)initWithMetalKitView:(MTKView *)mtkView
@@ -48,15 +68,7 @@
         _pipelineState = [_device newRenderPipelineStateWithDescriptor:pipelineDescriptor error:&error];
         NSAssert(_pipelineState, @"Failed to create pipeline: %@", error);
         
-        _viewMatrix = [MetalMatrix mm_lookAtWithEyeX:0
-                                            withEyeY:0
-                                            withEyeZ:-10.0
-                                         withCenterX:0
-                                         withCenterY:0
-                                         withCenterZ:0
-                                             withUpX:0
-                                             withUpY:1.0
-                                             withUpZ:0];
+        [self setCameraZ:-10.0];
         
         _projectionMatrix = [MetalMatrix mm_perspectiveWithFovy:90.0
                                                      withAspect:1.0
@@ -77,6 +89,19 @@
                                                  withHeight:size.height
                                                    withNear:0.1
                                                     withFar:100.0];
+}
+
+- (void)rotateViewToAngle:(float)radians
+{
+    _viewMatrix = [MetalMatrix mm_lookAtWithEyeX:_cameraZ*sin(radians)
+                                        withEyeY:0
+                                        withEyeZ:_cameraZ*cos(radians)
+                                     withCenterX:0
+                                     withCenterY:0
+                                     withCenterZ:0
+                                         withUpX:0
+                                         withUpY:1
+                                         withUpZ:0];
 }
 
 - (void)drawInMTKView:(MTKView *)view

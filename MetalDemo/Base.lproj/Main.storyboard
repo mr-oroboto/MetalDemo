@@ -17,9 +17,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="rKf-B7-4Cf" appends="YES" id="KTF-hz-zVT"/>
+                            <outletCollection property="gestureRecognizers" destination="kMl-Xk-oJR" appends="YES" id="IEK-pN-7TG"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="rKf-B7-4Cf">
+                    <connections>
+                        <action selector="handlePanGesture:" destination="BYZ-38-t0r" id="47i-LR-oXG"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="kMl-Xk-oJR">
+                    <connections>
+                        <action selector="handlePinchGesture:" destination="BYZ-38-t0r" id="Wus-5S-PWw"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="125" y="-34"/>
         </scene>

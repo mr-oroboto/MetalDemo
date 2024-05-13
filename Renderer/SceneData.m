@@ -84,8 +84,6 @@ static const UInt32 cubeIndices[] = {
                          indexType:MTLIndexTypeUInt32
                        indexBuffer:_cubeIndexBuffer
                  indexBufferOffset:0];
-    
-    NSLog(@"SceneData drew");
 }
 
 @end
